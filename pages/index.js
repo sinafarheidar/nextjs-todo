@@ -1,12 +1,30 @@
-import Head from 'next/head'
-import Link from 'next/link'
-import { Fragment } from 'react'
+import React from 'react'
+import { Container, Grid, Menu } from 'semantic-ui-react'
+import 'semantic-ui-css/semantic.min.css'
 
 export default function Home() {
   return (
-    <Fragment>
-      <h1>Home Page</h1>
-    </Fragment>
+<Grid textAlign='center' columns={3}>
+    <Grid.Row>
+      <Grid.Column>
+        <Menu fluid vertical>
+          <Menu.Item className='header'>Cats</Menu.Item>
+        </Menu>
+      </Grid.Column>
+      <Grid.Column>
+        <Menu fluid vertical>
+          <Menu.Item className='header'>Dogs</Menu.Item>
+          <Menu.Item>Poodle</Menu.Item>
+          <Menu.Item>Cockerspaniel</Menu.Item>
+        </Menu>
+      </Grid.Column>
+      <Grid.Column>
+        <Menu fluid vertical>
+          <Menu.Item className='header'>Monkeys</Menu.Item>
+        </Menu>
+      </Grid.Column>
+    </Grid.Row>
+  </Grid>
 
   )
 }
